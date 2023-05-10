@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head></head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        function setTimer() {
+            const element1 = `
+            <div>
+                <h1>JavaScript DOM manipulation</h1>
+                <input type="text" />
+                <p>${new Date().toLocaleTimeString()}</p>
+            </div>`;
+
+            document.getElementById('root').innerHTML = element1;
+
+        }
+
+        setInterval(setTimer, 1000);
+    </script>
+</body>
+
+</html>

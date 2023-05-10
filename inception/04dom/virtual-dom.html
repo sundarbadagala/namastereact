@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head></head>
+
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        function setTimer() {
+            const element1 = `
+            <div>
+                <h1>JavaScript DOM manipulation</h1>
+                <input type="text" />
+                <p>${new Date().toLocaleTimeString()}</p>
+            </div>`;
+
+            const app = React.createElement(
+                'div',
+                null,
+                React.createElement('h1', null, 'React Virtual DOM'),
+                React.createElement(
+                    'div',
+                    null,
+                    React.createElement('input', { type: 'text' })
+                ),
+                React.createElement('p', null, new Date().toLocaleTimeString())
+            );
+
+
+            root.render(app)
+        }
+
+        setInterval(setTimer, 1000);
+
+    </script>
+</body>
+
+</html>
