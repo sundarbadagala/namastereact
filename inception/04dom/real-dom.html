@@ -6,19 +6,18 @@
 <body>
     <div id="root"></div>
     <script>
-        function setTimer() {
-            const element1 = `
+        const root = document.getElementById('root')
+        function handleDom() {
+            const app = `
             <div>
-                <h1>JavaScript DOM manipulation</h1>
                 <input type="text" />
                 <p>${new Date().toLocaleTimeString()}</p>
             </div>`;
 
-            document.getElementById('root').innerHTML = element1;
-
+            root.innerHTML = app;
         }
 
-        setInterval(setTimer, 1000);
+        setInterval(handleDom, 1000);
     </script>
 </body>
 
